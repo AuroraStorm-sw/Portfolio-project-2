@@ -24,11 +24,14 @@ h1, button {
 h2 {
     font-family: Tangerine, Courier, monospace;
     font-size: 2rem;
-    text-decoration: underline;
 }
 
 p, li {
     font-family: Palanquin, Courier, monospace;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
                     /* INTRO SCREEN WITH RULES AND GAME START */
@@ -82,7 +85,7 @@ p, li {
                     /* BATTLE GROUND */
 
 .war-zone {
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,9 +93,41 @@ p, li {
 
 }
 
-.hands button {
-    font-size: 52px;
-    padding: 5px;
+.war-zone h2 {
+    font-size: 4rem;
+}
 
-    width: 100px;
+.hands button {
+    width: 80vw;
+
+    font-size: 52px;
+    align-items: center;
+
+    margin: 15px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+}
+
+
+                    /* SCORES */
+
+.scores {
+    padding-top: 25px;
+
+    font-size: 1.1rem;
+
+    /* center scores */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.warrior-score, .computer-score {
+
 }
