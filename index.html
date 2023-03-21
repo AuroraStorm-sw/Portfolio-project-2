@@ -4,50 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="assets/style.css">
 
     <title>Rock Paper Scissors</title>
 </head>
 <body>
     
-<section id="battle-field">
+<section class="battle-field">
 
-    <div id="intro-screen">
-        <h1>Welcome to the game</h1>
-        Here are the rules
+    <!-- <div class ="intro-screen fadeIn">
+        <h1>Welcome to the battle!</h1>
+        <h2>How to fight</h2>
+        <ul>
+            <li>Shield beats Bow</li>
+            <li>Bow beats Sword</li>
+            <li>Sword beats Shield</li>
+            <li>Picking the same weapon causes a tie</li>
+            <li>First to 5 wins</li>
+        </ul>
 
         <button id="start">Let the battle begin</button>
-    </div>
+    </div> -->
 
-    <section id="scores">
+    <section class="scores">
 
-        <div id="warrior-score">
+        <div class="warrior-score">
             <p>Warrior strikes = 0</p>
         </div>
 
-        <div id="computer-score">
+        <div class="computer-score">
             <p>Opponent strikes = 0</p>
         </div>
     </section>
 
-    <section id="war-zone">
+    <section class="war-zone">
 
         <h2>Choose your weapon!</h2>
-        <div id="hands">
-            images of what the player and computer holds in hand
-            <button>rock</button>
-            <button>paper</button>
-            <button>scissors</button>
+        <div class="hands">
+            <button id="shield">🛡️</button>
+            <button id="bow">🏹</button>
+            <button id="sword">⚔️</button>
         </div>
 
     </section>
 
-    <div id="outro-screen">
+    <!-- <div id="outro-screen">
         The battle is over! 
         Do you want to pursue another fight?
         <button>Let me at them!</button>
         <button>Enough fighting for today.</button>
-    </div>
+    </div> -->
 
 
 </section>

@@ -1,9 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Palanquin&family=Tangerine:wght@700&display=swap');
+
+                    /* GENERAL */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
+    /* background-image: url('img/frame-2766191_640.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+
     background-color: blanchedalmond;
+}
+
+h1, button {
+    font-family: Lora, Courier, monospace;
+}
+
+h2 {
+    font-family: Tangerine, Courier, monospace;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+p, li {
+    font-family: Palanquin, Courier, monospace;
+}
+
+                    /* INTRO SCREEN WITH RULES AND GAME START */
+
+
+.intro-screen {
+    height: 50vh;
+    width: 50vw;
+
+    /* centering the screen */
+    margin: 200px auto; 
+    text-align: center;
+
+    padding: 10px;
+    
+    background-color: rgb(19, 128, 91);
+    border-radius: 5px;
+}
+
+.intro-screen h1{
+    padding: 10px;
+ 
+}
+
+.intro-screen li {
+    list-style-type: none;
+}
+
+#start {
+    margin-top: 10%;
+    padding: 5%;
+
+    font-size: 1.1rem;
+    
+    border: 1px solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: 1s;
+}
+
+                    /* BATTLE GROUND */
+
+.war-zone {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.hands button {
+    font-size: 52px;
+    padding: 5px;
+
+    width: 100px;
 }
