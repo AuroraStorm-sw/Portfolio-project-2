@@ -23,7 +23,7 @@ h1, button {
 
 h2 {
     font-family: Tangerine, Courier, monospace;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 p, li {
@@ -37,9 +37,9 @@ button:hover {
                     /* INTRO SCREEN WITH RULES AND GAME START */
 
 
-.intro-screen {
+.intro-screen, #outro-screen {
     height: 50vh;
-    width: 50vw;
+    width: 60vw;
 
     /* centering the screen */
     margin: 200px auto; 
@@ -60,7 +60,7 @@ button:hover {
     list-style-type: none;
 }
 
-#start {
+button {
     margin-top: 10%;
     padding: 5%;
 
@@ -125,9 +125,5 @@ button:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-
-}
-
-.warrior-score, .computer-score {
 
 }
