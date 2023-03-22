@@ -1,24 +1,31 @@
 let warriorScore = 0;
 let computerScore = 0;
+const warriorPoint = document.getElementById('warrior-score'); 
+const computerPoint = document.getElementById('computer-score'); 
 
 let userPick;
 let computerPick;
 
 const startBtn = document.getElementById("start");
+const restartBtn = document.getElementById("restart-game");
+const quitBtn = document.getElementById("quit-game");
 
 const introScreen = document.querySelector(".intro-screen");
 const matchScreen = document.querySelector(".playfield");
+const outroScreen = document.querySelector(".outro-screen");
 
 const options = document.querySelectorAll(".options button");
 const warriorHand = document.getElementById("warrior-hand");
 const computerHand = document.getElementById("computer-hand");
 
+const result = document.getElementById("result");
+
 const winner = document.getElementById('winner');
 
-startBtn.addEventListener('click', function() {
-  startGame();
-  console.log('Start button is clicked');
-});
+
+
+restartBtn.addEventListener('click', restartGame);
+startBtn.addEventListener('click', startGame);
 
 //**Function that adds the hide class to the intro screen and removes the hide class
 //* from the match screen
@@ -61,6 +68,7 @@ function playMatch() {
       decideWinner();
       updateImg();
       updateScore();
+      gameOver();
     
     });
 
@@ -111,9 +119,36 @@ function updateImg() {
 }
 
 function updateScore() {
-    const warriorPoint = document.getElementById('warrior-score'); 
-    const computerPoint = document.getElementById('computer-score'); 
-    warriorPoint.textContent = warriorScore; 
-    computerPoint.textContent = computerScore;
+    warriorPoint.innerHTML = warriorScore; 
+    computerPoint.innerHTML = computerScore;
 }
 
+function gameOver() {
+    if(warriorScore === 5) {
+        matchScreen.classList.add('hide');
+        outroScreen.classList.remove('hide');
+        result.textContent = "You won the battle!"
+        console.log('Warrior won!');
+    }
+    if(computerScore === 5) {
+        matchScreen.classList.add('hide');
+        outroScreen.classList.remove('hide');
+        result.textContent = "Oh, no! Your opponent won!"
+        console.log('Opponent won!');
+    }
+}
+
+
+
+function restartGame() {
+    warriorScore = 0;
+    computerScore = 0;
+
+    outroScreen.classList.add('hide');
+    matchScreen.classList.remove('hide');
+
+    winner.innerHTML= "Choose your weapon!";
+
+    computerHand.src = `assets/img/sword.jpg`;
+    warriorHand.src = `assets/img/sword.jpg`;
+}
