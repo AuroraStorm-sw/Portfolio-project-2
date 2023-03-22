@@ -16,7 +16,7 @@ const computerHand = document.querySelector(".computer-hand");
 const playerScores = document.querySelector('.warrior-score p');
 const computerScores = document.querySelector('.computer-score p');
 
-const winner = document.getElementsByClassName('.winner');
+const winner = document.getElementById('winner');
 
 startBtn.addEventListener('click', function() {
   startGame();
@@ -71,19 +71,25 @@ function playMatch() {
 
 function decideWinner() {
   
-  if(userPick === 'shield' && computerPick === 'bow')
+  if(userPick === 'shield' && computerPick === 'bow') {
+    winner.innerHTML = 'Warrior wins!';
     console.log('Warrior wins!');
-    if (userPick === 'shield' && computerPick === 'sword') {
+      } else if (userPick === 'shield' && computerPick === 'sword') {
+        winner.innerHTML = 'Opponent wins!';
         console.log('Opponent wins!');
       } else if (userPick === 'bow' && computerPick === 'shield'){
+        winner.innerHTML = 'Warrior wins!';
         console.log('Warrior wins!');
       } else if (userPick === 'bow' && computerPick === 'sword'){
+        winner.innerHTML = 'Opponent wins!';
         console.log('Opponent wins!');
-      }else if (userPick === 'sword' && computerPick === 'shield') {
+      } else if (userPick === 'sword' && computerPick === 'shield') {
+        winner.innerHTML = 'Opponent wins!';
          console.log('Opponent wins!');
-      }else if (userPick === 'sword' && computerPick === 'bow') {
+      } else if (userPick === 'sword' && computerPick === 'bow') {
+        winner.innerHTML = 'Warrior wins!';
         console.log('Warrior wins!');
       } else {
-        console.log("tie!")
+        winner.innerHTML = "It's a tie!";
       }
 }
