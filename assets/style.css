@@ -120,6 +120,11 @@ button {
     cursor: pointer;
 }
 
+.computer-hand {
+    transform: rotateY(180deg);
+    padding-right: 100px;
+}
+
 
                     /* SCORES */
 
