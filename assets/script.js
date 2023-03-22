@@ -22,6 +22,7 @@ const result = document.getElementById("result");
 
 const winner = document.getElementById('winner');
 
+const computerOptions = ['shield', 'bow', 'sword'];
 
 
 restartBtn.addEventListener('click', restartGame);
@@ -42,7 +43,7 @@ function startGame() {
 
 function playMatch() {
 
-  const computerOptions = ['shield', 'bow', 'sword'];
+ 
 
       /**Using 'else if' as a way to decide the player and computer choices was inspired from 
       * https://github.com/kpsdev1 / https://github.com/kpsdev1/Rock-Paper-Scissors/blob/main/assets/js/script.js
@@ -51,7 +52,8 @@ function playMatch() {
 
   options.forEach(option => {
     option.addEventListener('click', function() {
-              
+      
+      const computerOption = () => {
       let pick = Math.floor(Math.random() * computerOptions.length);
       if(pick === 0) {
           computerPick = 'shield';
@@ -64,7 +66,11 @@ function playMatch() {
       if (this.getAttribute('data-choice') === 'shield') userPick = 'shield';
       else if (this.getAttribute('data-choice') === 'bow') userPick = 'bow';
       else userPick = 'sword';
+    }
 
+      console.log(computerPick);
+
+      computerOption();
       decideWinner();
       updateImg();
       updateScore();
@@ -108,9 +114,9 @@ function updateImg() {
     } else {
         warriorHand.src = `assets/img/sword.jpg`;
     }
-    if(computerHand === 'shield') {
+    if(computerPick === 'shield') {
         computerHand.src = `assets/img/shield.jpg`;
-    } else if(computerHand === 'paper') {
+    } else if(computerPick === 'bow') {
         computerHand.src = `assets/img/bow.jpg`;
     } else {
         computerHand.src = `assets/img/sword.jpg`;
