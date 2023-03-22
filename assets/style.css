@@ -30,6 +30,7 @@ p, li {
     font-size: 1.1rem;
 }
 
+
 button:hover {
     transform: scale(1.1);
 }
@@ -105,18 +106,26 @@ button {
     text-align: center;
 }
 
-.hands button {
-    width: 80vw;
+/* .in-hand img {
+    width: 35%;
+}*/
 
-    font-size: 52px;
+.hands {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+} 
+
+.hands img {
+    width: 90%;
+}
+
+.hands button {
     align-items: center;
 
-    margin: 15px;
-    padding: 10px;
-
-    display: flex;
-    flex-direction: column;
-
+    border: none;
+    background: none;
     cursor: pointer;
 }
 
@@ -160,7 +169,6 @@ button {
       background-color: lightgreen;
     }
     .hands button {
-        width: 20vw;
         display: inline-block;
     }
     
