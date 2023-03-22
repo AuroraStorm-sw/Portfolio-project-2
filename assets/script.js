@@ -10,11 +10,8 @@ const introScreen = document.querySelector(".intro-screen");
 const matchScreen = document.querySelector(".playfield");
 
 const options = document.querySelectorAll(".options button");
-const warriorHand = document.querySelector(".warrior-hand");
-const computerHand = document.querySelector(".computer-hand");
-
-const playerScores = document.querySelector('.warrior-score p');
-const computerScores = document.querySelector('.computer-score p');
+const warriorHand = document.getElementById("warrior-hand");
+const computerHand = document.getElementById("computer-hand");
 
 const winner = document.getElementById('winner');
 
@@ -62,7 +59,8 @@ function playMatch() {
       else userPick = 'sword';
 
       decideWinner();
-
+      updateImg();
+      updateScore();
     
     });
 
@@ -73,23 +71,49 @@ function decideWinner() {
   
   if(userPick === 'shield' && computerPick === 'bow') {
     winner.innerHTML = 'Warrior wins!';
-    console.log('Warrior wins!');
+    warriorScore++;
       } else if (userPick === 'shield' && computerPick === 'sword') {
         winner.innerHTML = 'Opponent wins!';
-        console.log('Opponent wins!');
+        computerScore++;
       } else if (userPick === 'bow' && computerPick === 'shield'){
         winner.innerHTML = 'Warrior wins!';
-        console.log('Warrior wins!');
+        warriorScore++;
       } else if (userPick === 'bow' && computerPick === 'sword'){
         winner.innerHTML = 'Opponent wins!';
-        console.log('Opponent wins!');
+        computerScore++;
       } else if (userPick === 'sword' && computerPick === 'shield') {
         winner.innerHTML = 'Opponent wins!';
-         console.log('Opponent wins!');
+        computerScore++;
       } else if (userPick === 'sword' && computerPick === 'bow') {
         winner.innerHTML = 'Warrior wins!';
-        console.log('Warrior wins!');
+        warriorScore++;
       } else {
         winner.innerHTML = "It's a tie!";
       }
 }
+
+function updateImg() {
+    if(userPick === 'shield') {
+        warriorHand.src = `assets/img/shield.jpg`;
+    } else if(userPick === 'bow') {
+        warriorHand.src = `assets/img/bow.jpg`;
+    } else {
+        warriorHand.src = `assets/img/sword.jpg`;
+    }
+    if(computerHand === 'shield') {
+        computerHand.src = `assets/img/shield.jpg`;
+    } else if(computerHand === 'paper') {
+        computerHand.src = `assets/img/bow.jpg`;
+    } else {
+        computerHand.src = `assets/img/sword.jpg`;
+    }
+
+}
+
+function updateScore() {
+    const warriorPoint = document.getElementById('warrior-score'); 
+    const computerPoint = document.getElementById('computer-score'); 
+    warriorPoint.textContent = warriorScore; 
+    computerPoint.textContent = computerScore;
+}
+
