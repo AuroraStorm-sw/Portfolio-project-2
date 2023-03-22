@@ -37,23 +37,81 @@
         playMatch();
     };
 
-
-    //**Function to start the match
     function playMatch() {
-
-
-        //Applying options for the computer
-
-
-
+  
+        // APPLYING COMPUTER OPTIONS
+    
         options.forEach(option => {
-            option.addEventListener('click', function() {
+          option.addEventListener('click', function() {
+            const computerNumber = Math.floor(Math.random() * 3);
+            const computerChoice = computerOptions[computerNumber];
+    
+            //Here is where we initialize compare hands
+    
+            compareHands(this.textContent, computerChoice);
+    
+            //Update images
+            warriorHand.src = `assets/img/${this.textContent}.jpg`;
+            computerHand.src = `assets/img/${computerChoice}.jpg`;
+          });
+        });
+    
+    }
 
-                const computerNumber = Math.floor(Math.random() * computerOptions);
-                const computerChoice = computerOptions[computerNumber];
+    function compareHands(playerChoice, computerChoice) {
+        //Update 'Choose your option' text
+  
+        //Checking for a tie
+        if (playerChoice === computerChoice) {
+          winner.textContent = 'It is a tie!';
+          return;
+        }
+  
+        // Check for rock
+        if (playerChoice === 'rock') {
+          if (computerChoice === 'scissors') {
+            winner.textContent = 'Player scores!';
+            pScore++;
+            updateScore();
+            return;
+          } else {
+            winner.textContent = 'Computer scores!';
+            cScore++;
+            updateScore();
+            return;
+          }
+        }
+  
+        //Check for paper
+        if (playerChoice === 'paper') {
+          if (computerChoice === 'scissors') {
+            winner.textContent = 'Computer scores!';
+            cScore++;
+            updateScore();
+            return;
+          } else {
+            winner.textContent = 'Player scores!';
+            pScore++;
+            updateScore();
+            return;
+          }
+        }
+  
+        //Check for scissors
+        if (playerChoice === 'scissors') {
+          if (computerChoice === 'rock') {
+            winner.textContent = 'Computer scores!';
+            cScore++;
+            updateScore();
+            return;
+          } else {
+            winner.textContent = 'Player scores!';
+            pScore++;
+            updateScore();
+            return;
+          }
+        }
+  
+      }
 
-                console.log(computerChoice);
-            })
-        })
-    };
 
