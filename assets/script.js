@@ -1,7 +1,8 @@
 let warriorScore = 0;
 let computerScore = 0;
 
-let userHand;
+let userPick;
+let computerPick;
 
 const startBtn = document.getElementById("start");
 
@@ -15,7 +16,7 @@ const computerHand = document.querySelector(".computer-hand");
 const playerScores = document.querySelector('.warrior-score p');
 const computerScores = document.querySelector('.computer-score p');
 
-const winner = document.querySelector('.winner');
+const winner = document.getElementsByClassName('.winner');
 
 startBtn.addEventListener('click', function() {
   startGame();
@@ -39,33 +40,50 @@ function playMatch() {
 
   const computerOptions = ['shield', 'bow', 'sword'];
 
-  options.forEach(option => {
-    option.addEventListener('click', function() {
-      const computerNumber = Math.floor(Math.random() * 3);
-      const computerChoice = computerOptions[computerNumber];
-
-      console.log(computerChoice);
-
-      /**Using 'else if' as a way to decide the players choice was inspired from 
+      /**Using 'else if' as a way to decide the player and computer choices was inspired from 
       * https://github.com/kpsdev1 / https://github.com/kpsdev1/Rock-Paper-Scissors/blob/main/assets/js/script.js
-      * I found this while searching for a tutorial/ideas for how to solve picking out what the user chose
+      * I found this while searching for a tutorial/ideas for how to solve picking out what the user choice
       */
 
-      if (this.getAttribute('data-type') === 'shield') userHand = 'shield';
-      else if (this.getAttribute('data-type') === 'bow') userHand = 'bow';
-      else userHand = 'sword';
+  options.forEach(option => {
+    option.addEventListener('click', function() {
+              
+      let pick = Math.floor(Math.random() * computerOptions.length);
+      if(pick === 0) {
+          computerPick = 'shield';
+      } else if(pick === 1) {
+          computerPick = 'bow';
+      } else {
+          computerPick = 'sword';
+      }
 
-      console.log(userHand);
+      if (this.getAttribute('data-choice') === 'shield') userPick = 'shield';
+      else if (this.getAttribute('data-choice') === 'bow') userPick = 'bow';
+      else userPick = 'sword';
+
+      decideWinner();
+
+    
     });
+
   });
 }
 
 function decideWinner() {
   
-  if () {
-    
-  } else {
-    
-  }
-  return result;
+  if(userPick === 'shield' && computerPick === 'bow')
+    console.log('Warrior wins!');
+    if (userPick === 'shield' && computerPick === 'sword') {
+        console.log('Opponent wins!');
+      } else if (userPick === 'bow' && computerPick === 'shield'){
+        console.log('Warrior wins!');
+      } else if (userPick === 'bow' && computerPick === 'sword'){
+        console.log('Opponent wins!');
+      }else if (userPick === 'sword' && computerPick === 'shield') {
+         console.log('Opponent wins!');
+      }else if (userPick === 'sword' && computerPick === 'bow') {
+        console.log('Warrior wins!');
+      } else {
+        console.log("tie!")
+      }
 }
