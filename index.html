@@ -27,31 +27,32 @@
         <button id="start">Let the battle begin</button>
     </div>
 
-    <section class="scores">
+    <section class="hide">
+        <div class="scores">
 
-        <div class="warrior-score">
-            <p>Warrior strikes = 0</p>
+            <div class="warrior-score">
+                <p>Warrior strikes = 0</p>
+            </div>
+
+            <div class="computer-score">
+                <p>Opponent strikes = 0</p>
+            </div>
+
         </div>
 
-        <div class="computer-score">
-            <p>Opponent strikes = 0</p>
-        </div>
+        <div class="battle-zone">
 
+            <h2 class="winner">Choose your weapon!</h2>
+
+            <div class="hands">
+                <button id="shield">🛡️</button>
+                <button id="bow">🏹</button>
+                <button id="sword">⚔️</button>
+            </div>
+        </div>
     </section>
 
-    <section class="battle-zone">
-
-        <h2 class="winner">Choose your weapon!</h2>
-
-        <div class="hands">
-            <button id="shield">🛡️</button>
-            <button id="bow">🏹</button>
-            <button id="sword">⚔️</button>
-        </div>
-
-    </section>
-
-    <div class="outro-screen fadeIn">
+    <div class="outro-screen hide">
         <h2>Well fought!</h2>
         <p>As they say, the battle may be over, but the war has just started!</p>
         <p>Do you want to pursue another fight?</p>

@@ -8,12 +8,11 @@
 }
 
 body {
-    /* background-image: url('img/frame-2766191_640.png');
-    background-position: center;
+    background-image: url();
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; */
-
+    background-position: relative;
+  
     background-color: blanchedalmond;
 }
 
@@ -39,11 +38,15 @@ button:hover {
 
 
 .intro-screen, .outro-screen {
-    height: 50vh;
-    width: 60vw;
+    height: 50%;
+    width: 50%;
 
     /* centering the screen */
-    margin: 200px auto; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     text-align: center;
 
     padding: 10px;
@@ -74,8 +77,9 @@ button {
 
 }
 
-.fadeOut {
+.hide {
     opacity: 0;
+    pointer-events: none;
     /* ADD FADE OUT TRANSITION */
 }
 
