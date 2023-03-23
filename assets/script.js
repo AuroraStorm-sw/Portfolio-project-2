@@ -1,4 +1,8 @@
+/**
+ * all variables gathered in one place and used throughout the code
+ */
 
+// score and score counting
 let warriorScore = 0;
 let computerScore = 0;
 const warriorPoint = document.getElementById('warrior-score'); 
@@ -7,26 +11,31 @@ const computerPoint = document.getElementById('computer-score');
 let userPick;
 let computerPick;
 
+const computerOptions = ['shield', 'bow', 'sword'];
+
+
+// buttons
 const startBtn = document.getElementById("start");
 const restartBtn = document.getElementById("restart-game");
 const quitBtn = document.getElementById("quit-game");
 
+// the 3 main screens shown and hidden throughout the game
 const introScreen = document.querySelector(".intro-screen");
 const matchScreen = document.querySelector(".playfield");
 const outroScreen = document.querySelector(".outro-screen");
 
+// gameplay buttons and image display of each option
 const options = document.querySelectorAll(".options button");
 const warriorHand = document.getElementById("warrior-hand");
 const computerHand = document.getElementById("computer-hand");
 
+// text updates based on round winner/loser
 const result = document.getElementById("result");
-
 const winner = document.getElementById('winner');
 
-const computerOptions = ['shield', 'bow', 'sword'];
-
 /** 
- * 
+ * event listeners are added after the DOM content has loaded to ensure everything
+ * is responsive. 
 */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//**Function that adds the hide class to the intro screen and removes the hide class
-//* from the match screen
-
+/**Function that adds the hide class to the intro screen and removes the hide class 
+ * from the match screen
+*/
 function startGame() {
 
   introScreen.classList.add('hide');
@@ -48,14 +57,19 @@ function startGame() {
 }
 
 /**
- * 
+ * function to play a match, adds event listener for when someone clicks on one of the game buttons, followed  
+ * by a Math library that randomly picks one of the three options for the computer; shield, bow, or sword. This
+ * is then stored in the variable computeOption.
+ * Below is an 'if else' statement that grabs the data-choice from the index.html and stores it in userPick
+ * for later use when deciding winner.
+ * Following is the calling of 5 functions that holds all the different game operations
  */
 function playMatch() {
-
  
       /**Using 'else if' as a way to decide the player and computer choices was inspired from 
       * https://github.com/kpsdev1 / https://github.com/kpsdev1/Rock-Paper-Scissors/blob/main/assets/js/script.js
-      * I found this while searching for a tutorial/ideas for how to solve picking out what the user choice
+      * I found this while searching for a tutorial/ideas for how to solve picking out how the different
+      * choices were to be implemented
       */
 
       options.forEach(option => {
@@ -88,7 +102,10 @@ function playMatch() {
 }
 
 /**
- * 
+ * a function made up of 'else if' statements that decides which 'weapon' wins over the other and how
+ * the game should behave based on what the player picks and what the computer picks.
+ * each statement also updates the inner html of the h2 placed above the chosen weapons depending on who won.
+ * The score is then added to by the warrorScore++ / computerScore++
  */
 
 function decideWinner() {
@@ -117,7 +134,9 @@ function decideWinner() {
 }
 
 /**
- * 
+ * a function made up of 'if else' statements that changes the image of the weapons based on what the 
+ * player and computer choses, swapping out the img source in the index.html "warrior-hand" and "computer-hand"
+ * respectively.
  */
 
 function updateImg() {
@@ -139,7 +158,8 @@ function updateImg() {
 }
 
 /**
- * 
+ * a function that updates the scores after each round, adding the inner html value to respective 
+ * score variable
  */
 
 function updateScore() {
@@ -149,7 +169,10 @@ function updateScore() {
 }
 
 /**
- * 
+ * a function made up of two if statements deciding what information will be displayed depending on who
+ * won, updating the h2 of the outroScreen with congratulations or commiserations.
+ * it hides the matchScreen and shows the outroScreen, where the player have the option to replay the 
+ * game or quit.
  */
 
 function gameOver() {
@@ -168,7 +191,9 @@ function gameOver() {
 }
 
 /**
- * 
+ * function to restart the game that resets the scores to 0.
+ * it hides the outroScreen and brings back the matchScreen, changing the h2 back to the original text from
+ * game start. It sets the images to a pair of swords.
  */
 
 function restartGame() {
@@ -189,7 +214,9 @@ function restartGame() {
 }
 
 /**
- * 
+ * function to quit the game that resets the scores to 0.
+ * it hides both the matchScreen and the outroScreen, showing the introScreen instead. It also resets
+ * the images to the start up ones if the player choose so start a new game.
  */
 
 function quitGame() {
@@ -203,8 +230,6 @@ function quitGame() {
   matchScreen.classList.add('hide');
   introScreen.classList.remove('hide');
 
-  winner.innerHTML= "Let the battle begin!";
-
-  computerHand.src = `assets/img/sword.jpg`;
-  warriorHand.src = `assets/img/sword.jpg`;
+  computerHand.src = `assets/img/front.jpg`;
+  warriorHand.src = `assets/img/front.jpg`;
 }
