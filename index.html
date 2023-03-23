@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name=description content="A quick, fun game based on rock, papper, scissors">
+
     <link rel="stylesheet" href="assets/style.css">
 
     <title>Bow, Sword, Shield</title>
@@ -45,14 +47,14 @@
             <h2><span id="winner">Let the battle begin!</span></h2>
 
             <div class="in-hand">
-                <img id="warrior-hand" src="assets/img/front.jpg" alt="a cartoon bow">
-                <img id="computer-hand" src="assets/img/front.jpg" alt="a cartoon bow">
+                <img id="warrior-hand" src="assets/img/front.jpg" alt="start image of a bow, shield, and sword">
+                <img id="computer-hand" src="assets/img/front.jpg" alt="start image of a bow, shield, and sword">
             </div>
 
             <div class="options">
-                <button data-choice="shield" class="shield"><img src="assets/img/shield.jpg" alt=""></button>
-                <button data-choice="bow" class="bow"><img src="assets/img/bow.jpg" alt=""></button>
-                <button data-choice="sword" class="sword"><img src="assets/img/sword.jpg" alt=""></button>
+                <button aria-label="click to choose shield" data-choice="shield" class="shield"><img src="assets/img/shield.jpg" alt="shield"></button>
+                <button aria-label="click to choose bow" data-choice="bow" class="bow"><img src="assets/img/bow.jpg" alt="bow"></button>
+                <button aria-label="click to choose sword" data-choice="sword" class="sword"><img src="assets/img/sword.jpg" alt="sword"></button>
             </div>
         </div>
     </section>
@@ -61,8 +63,8 @@
         <h2><span id="result">Well fought!</span></h2>
         <p>As they say, the battle may be over, but the war has just started!</p>
         <p>Do you want to pursue another fight?</p>
-        <button id="restart-game">Let me at them!</button>
-        <button id="quit-game">Enough fighting for today.</button>
+        <button aria-label="click to start a new game" id="restart-game">Let me at them!</button>
+        <button aria-label="click to quit the game" id="quit-game">Enough fighting for today.</button>
     </div>
 
 <script src="assets/script.js"></script>
