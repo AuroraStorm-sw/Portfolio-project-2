@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   startBtn.addEventListener('click', startGame);
   restartBtn.addEventListener('click', restartGame);
   quitBtn.addEventListener('click', quitGame);
-})
+});
 
 
 //**Function that adds the hide class to the intro screen and removes the hide class
@@ -44,7 +44,7 @@ function startGame() {
   matchScreen.classList.remove('hide');
 
   playMatch();
-};
+}
 
 /**
  * 
@@ -73,7 +73,7 @@ function playMatch() {
       if (this.getAttribute('data-choice') === 'shield') userPick = 'shield';
       else if (this.getAttribute('data-choice') === 'bow') userPick = 'bow';
       else userPick = 'sword';
-    }
+    };
       
       computerOption();
       decideWinner();
@@ -155,13 +155,13 @@ function gameOver() {
     if(warriorScore === 5) {
         matchScreen.classList.add('hide');
         outroScreen.classList.remove('hide');
-        result.textContent = "You won the battle!"
+        result.textContent = "You won the battle!";
         
     }
     if(computerScore === 5) {
         matchScreen.classList.add('hide');
         outroScreen.classList.remove('hide');
-        result.textContent = "Oh, no! Your opponent won!"
+        result.textContent = "Oh, no! Your opponent won!";
         
     }
 }
