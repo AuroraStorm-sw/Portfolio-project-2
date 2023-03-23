@@ -8,10 +8,10 @@
 }
 
 body {
-    background-image: url();
+    background-image: url("img/shield-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: relative;
+    background-position: center;
   
     background-color: blanchedalmond;
 }
@@ -27,7 +27,7 @@ h2 {
 
 p, li {
     font-family: Palanquin, Courier, monospace;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 
@@ -39,8 +39,8 @@ button:hover {
 
 
 .intro-screen, .outro-screen {
-    height: 50%;
-    width: 50%;
+    height: 60vh;
+    width: 50vw;
 
     /* centering the screen */
     position: absolute;
@@ -52,8 +52,9 @@ button:hover {
 
     padding: 10px;
     
-    background-color: rgb(19, 128, 91);
+    border:  5px solid rgb(138, 132, 132);
     border-radius: 5px;
+    background-color: rgba(207, 207, 199, 0.6);
 }
 
 .intro-screen h1{
