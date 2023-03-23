@@ -38,7 +38,9 @@ Full responsive site [here]()
 # UX
 
 ## Website owner goals
-
+- 
+- 
+- 
 
 ## User goals
 
