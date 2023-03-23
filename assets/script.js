@@ -31,6 +31,7 @@ const computerOptions = ['shield', 'bow', 'sword'];
 document.addEventListener("DOMContentLoaded", function () {
   startBtn.addEventListener('click', startGame);
   restartBtn.addEventListener('click', restartGame);
+  quitBtn.addEventListener('click', quitGame);
 })
 
 
@@ -184,4 +185,25 @@ function restartGame() {
     computerHand.src = `assets/img/sword.jpg`;
     warriorHand.src = `assets/img/sword.jpg`;
 
+}
+
+/**
+ * 
+ */
+
+function quitGame() {
+
+  warriorScore = 0;
+  computerScore = 0;
+
+  updateScore();
+  
+  outroScreen.classList.add('hide');
+  matchScreen.classList.add('hide');
+  introScreen.classList.remove('hide');
+
+  winner.innerHTML= "Let the battle begin!";
+
+  computerHand.src = `assets/img/sword.jpg`;
+  warriorHand.src = `assets/img/sword.jpg`;
 }
