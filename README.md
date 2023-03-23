@@ -175,8 +175,7 @@ Steps I took to deploy my website;
 - I followed along tutorials from ![developedbyed](https://www.youtube.com/watch?v=qWPtKtYEsN4&t=2811s) and ![Code with Ania Kubów](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=764s) on ![YouTube](https://www.youtube.com/) to better understand the process of creating a rock, paper, scissors type game and what functions are needed to get it to work.
 
 Flavicon:
-
-- https://www.flaticon.com/
+- Image converted with https://favicon.io/favicon-converter/
 
 Fonts:
 https://fonts.google.com
