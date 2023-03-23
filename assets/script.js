@@ -73,12 +73,13 @@ function playMatch() {
       else if (this.getAttribute('data-choice') === 'bow') userPick = 'bow';
       else userPick = 'sword';
     }
-
+      
       computerOption();
       decideWinner();
       updateImg();
       updateScore();
       gameOver();
+     
     });
 
   });
@@ -142,6 +143,7 @@ function updateImg() {
 function updateScore() {
     warriorPoint.innerHTML = warriorScore; 
     computerPoint.innerHTML = computerScore;
+    
 }
 
 /**
@@ -168,7 +170,12 @@ function gameOver() {
  */
 
 function restartGame() {
- 
+
+    warriorScore = 0;
+    computerScore = 0;
+
+    updateScore();
+
     outroScreen.classList.add('hide');
     matchScreen.classList.remove('hide');
 
@@ -176,5 +183,5 @@ function restartGame() {
 
     computerHand.src = `assets/img/sword.jpg`;
     warriorHand.src = `assets/img/sword.jpg`;
-}
 
+}
