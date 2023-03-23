@@ -137,7 +137,12 @@ The website has been manually tested for responsiveness across Firefox, Google C
 
 # Bugs
 
+Score not resetting when pressing the reset button, but only when a new game is started and the next move is made.
+
 ## Fixed bugs
+
+The computer choice didn't pick images according to console.log, and made me worried that something was wrong with the array.
+Solved: Got adviced by a Slack member that the console.log was placed above the initialized function, and the computer was picking out the correct option.
 
 
 ## Deployment
@@ -172,12 +177,9 @@ Flavicon:
 - https://www.flaticon.com/
 
 Fonts:
-
-
+https://fonts.google.com
 
 Images:
-
-https://www.pexels.com/photo/crochet-and-thread-on-magazine-in-daytime-4792085/
 
 Sources:
 

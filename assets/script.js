@@ -25,15 +25,10 @@ const winner = document.getElementById('winner');
 const computerOptions = ['shield', 'bow', 'sword'];
 
 
-restartBtn.addEventListener('click', restartGame);
-startBtn.addEventListener('click', startGame);
-
 //**Function that adds the hide class to the intro screen and removes the hide class
 //* from the match screen
 
 function startGame() {
-
-  console.log('game has begun');
 
   introScreen.classList.add('hide');
   matchScreen.classList.remove('hide');
@@ -44,14 +39,13 @@ function startGame() {
 function playMatch() {
 
  
-
       /**Using 'else if' as a way to decide the player and computer choices was inspired from 
       * https://github.com/kpsdev1 / https://github.com/kpsdev1/Rock-Paper-Scissors/blob/main/assets/js/script.js
       * I found this while searching for a tutorial/ideas for how to solve picking out what the user choice
       */
 
-  options.forEach(option => {
-    option.addEventListener('click', function() {
+      options.forEach(option => {
+      option.addEventListener('click', function() {
       
       const computerOption = () => {
       let pick = Math.floor(Math.random() * computerOptions.length);
@@ -68,14 +62,13 @@ function playMatch() {
       else userPick = 'sword';
     }
 
-      console.log(computerPick);
+    
 
       computerOption();
       decideWinner();
       updateImg();
-      updateScore();
       gameOver();
-    
+      console.log(computerPick);
     });
 
   });
@@ -134,19 +127,20 @@ function gameOver() {
         matchScreen.classList.add('hide');
         outroScreen.classList.remove('hide');
         result.textContent = "You won the battle!"
-        console.log('Warrior won!');
+        
     }
     if(computerScore === 5) {
         matchScreen.classList.add('hide');
         outroScreen.classList.remove('hide');
         result.textContent = "Oh, no! Your opponent won!"
-        console.log('Opponent won!');
+        
     }
 }
 
-
+    
 
 function restartGame() {
+ 
     warriorScore = 0;
     computerScore = 0;
 
@@ -158,3 +152,7 @@ function restartGame() {
     computerHand.src = `assets/img/sword.jpg`;
     warriorHand.src = `assets/img/sword.jpg`;
 }
+
+updateScore();
+startBtn.addEventListener('click', startGame);
+restartBtn.addEventListener('click', restartGame);
