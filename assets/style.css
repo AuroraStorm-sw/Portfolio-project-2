@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url("img/shield-bg.jpg");
+    background-image: url("img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -30,6 +30,18 @@ p, li {
     font-size: 1.2rem;
 }
 
+button {
+    margin-top: 10%;
+    padding: 5%;
+
+    font-size: 1.1rem;
+    
+    border: 1px solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
 
 button:hover {
     transform: scale(1.1);
@@ -40,7 +52,7 @@ button:hover {
 
 .intro-screen, .outro-screen {
     height: 60vh;
-    width: 50vw;
+    width: 60vw;
 
     /* centering the screen */
     position: absolute;
@@ -66,19 +78,6 @@ button:hover {
     list-style-type: none;
 }
 
-button {
-    margin-top: 10%;
-    padding: 5%;
-
-    font-size: 1.1rem;
-    
-    border: 1px solid;
-    border-radius: 5px;
-
-    cursor: pointer;
-
-}
-
 .hide {
     opacity: 0;
     pointer-events: none;
@@ -90,50 +89,6 @@ button {
     /* ADD FADE IN TRANSITION */
 
 }
-
-                    /* BATTLE GROUND */
-
-.battle-zone {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-
-.battle-zone h2 {
-    font-size: 4rem;
-    text-align: center;
-}
-
-.in-hand img{
-    max-width: 40vw;
-    padding: 10px;
-}
-
-.options, .in-hand {
-    display: flex;
-
-    margin: 0;
-} 
-
-.options img {
-    width: 90%;
-}
-
-.options button {
-    align-items: center;
-
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-#computer-hand {
-    transform: rotateY(180deg);
-}
-
 
                     /* SCORES */
 
@@ -147,6 +102,60 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
+}
+
+.scores, 
+.battle-zone {
+    background-color: rgba(190, 190, 188, 0.5);
+}
+
+
+                    /* BATTLE GROUND */
+
+.battle-zone {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.battle-zone h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.in-hand img{
+    max-width: 40vw;
+    
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+.options, .in-hand {
+    display: flex;
+
+    margin: 0;
+} 
+
+.options img {
+    width: 90%;
+
+    border-radius: 10px;
+}
+
+.options button {
+    align-items: center;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Flips the image in the computers hand to mirror the players */
+#computer-hand {
+    transform: rotateY(180deg);
 
 }
 
@@ -165,11 +174,23 @@ button {
                     /* MEDIA */
 
 @media screen and (min-width: 600px) {
-    body {
-      background-color: lightgreen;
-    }
     .options button {
         display: inline-block;
     }
     
   }
+
+@media screen and (min-width: 1060px) {
+    .scores p {
+        font-size: 1.5rem;
+    }
+
+    .options button {
+        width: 130%;
+        padding: 40px;
+    }
+
+    .in-hand img {
+        min-width: 50%;
+    }
+}
