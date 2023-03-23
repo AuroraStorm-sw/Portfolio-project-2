@@ -7,13 +7,14 @@
 
     <meta name=description content="A quick, fun game based on rock, papper, scissors">
 
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Bow, Sword, Shield</title>
 </head>
 <body>
     
-
+                    <!-- Introduction screen that pops up when loading the page -->
+                    <!-- Contains an unordered list with all the rules for the game and a start-game button -->
 
     <div class ="intro-screen">
         <h1>Welcome to the battle!</h1>
@@ -28,6 +29,9 @@
 
         <button id="start">Step onto the battlefield</button>
     </div>
+
+                        <!-- Playfield for the matches, shows the players and opponents hands and the score -->
+                        <!-- Shows the 3 options of weapons to choose from -->
 
     <section class="playfield hide">
         <div class="scores">
@@ -59,6 +63,10 @@
         </div>
     </section>
 
+
+                    <!-- Outro screen that pops up when the player or opponent has reached 5 points -->
+                    <!-- gives the option to restart or quit the game -->
+
     <div class="outro-screen hide">
         <h2><span id="result">Well fought!</span></h2>
         <p>As they say, the battle may be over, but the war has just started!</p>
@@ -67,6 +75,6 @@
         <button aria-label="click to quit the game" id="quit-game">Enough fighting for today.</button>
     </div>
 
-<script src="assets/script.js"></script>
+<script src="assets/script/script.js"></script>
 </body>
 </html>
