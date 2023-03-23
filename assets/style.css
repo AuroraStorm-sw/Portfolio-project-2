@@ -106,13 +106,13 @@ button {
     text-align: center;
 }
 
-/* .in-hand img {
-    width: 35%;
-}*/
+.in-hand img{
+    width: 40vw;
+    padding: 10px;
+}
 
-.options {
+.options, .in-hand {
     display: flex;
-    flex-direction: row;
 
     margin: 0;
 } 
@@ -129,9 +129,8 @@ button {
     cursor: pointer;
 }
 
-.computer-hand {
+#computer-hand {
     transform: rotateY(180deg);
-    padding-right: 100px;
 }
 
 

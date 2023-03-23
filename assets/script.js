@@ -24,6 +24,15 @@ const winner = document.getElementById('winner');
 
 const computerOptions = ['shield', 'bow', 'sword'];
 
+/** 
+ * 
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  startBtn.addEventListener('click', startGame);
+  restartBtn.addEventListener('click', restartGame);
+})
+
 
 //**Function that adds the hide class to the intro screen and removes the hide class
 //* from the match screen
@@ -36,6 +45,9 @@ function startGame() {
   playMatch();
 };
 
+/**
+ * 
+ */
 function playMatch() {
 
  
@@ -62,17 +74,19 @@ function playMatch() {
       else userPick = 'sword';
     }
 
-    
-
       computerOption();
       decideWinner();
       updateImg();
+      updateScore();
       gameOver();
-      console.log(computerPick);
     });
 
   });
 }
+
+/**
+ * 
+ */
 
 function decideWinner() {
   
@@ -99,6 +113,10 @@ function decideWinner() {
       }
 }
 
+/**
+ * 
+ */
+
 function updateImg() {
     if(userPick === 'shield') {
         warriorHand.src = `assets/img/shield.jpg`;
@@ -117,10 +135,18 @@ function updateImg() {
 
 }
 
+/**
+ * 
+ */
+
 function updateScore() {
     warriorPoint.innerHTML = warriorScore; 
     computerPoint.innerHTML = computerScore;
 }
+
+/**
+ * 
+ */
 
 function gameOver() {
     if(warriorScore === 5) {
@@ -137,13 +163,12 @@ function gameOver() {
     }
 }
 
-    
+/**
+ * 
+ */
 
 function restartGame() {
  
-    warriorScore = 0;
-    computerScore = 0;
-
     outroScreen.classList.add('hide');
     matchScreen.classList.remove('hide');
 
@@ -153,6 +178,3 @@ function restartGame() {
     warriorHand.src = `assets/img/sword.jpg`;
 }
 
-updateScore();
-startBtn.addEventListener('click', startGame);
-restartBtn.addEventListener('click', restartGame);
