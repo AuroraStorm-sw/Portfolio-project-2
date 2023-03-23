@@ -172,6 +172,8 @@ Steps I took to deploy my website;
 
 - Code institute's template: https://github.com/Code-Institute-Org/gitpod-full-template
 
+- I followed along tutorials from ![developedbyed](https://www.youtube.com/watch?v=qWPtKtYEsN4&t=2811s) and ![Code with Ania Kubów](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=764s) on ![YouTube](https://www.youtube.com/) to better understand the process of creating a rock, paper, scissors type game and what functions are needed to get it to work.
+
 Flavicon:
 
 - https://www.flaticon.com/
@@ -180,6 +182,11 @@ Fonts:
 https://fonts.google.com
 
 Images:
+
+Shield: https://www.vecteezy.com/vector-art/425257-vector-shield-icon
+Bow: https://www.vecteezy.com/vector-art/423523-bow-icon-vector-illustration
+Sword: https://www.vecteezy.com/vector-art/420638-weapons-icon-vector-illustration
+
 
 Sources:
 

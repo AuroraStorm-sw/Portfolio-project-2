@@ -107,7 +107,7 @@ button {
 }
 
 .in-hand img{
-    width: 40vw;
+    max-width: 40vw;
     padding: 10px;
 }
 
