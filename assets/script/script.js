@@ -16,8 +16,8 @@ const computerOptions = ['shield', 'bow', 'sword'];
 
 // buttons
 const startBtn = document.getElementById("start");
-const restartBtn = document.getElementById("restart-game");
-const quitBtn = document.getElementById("quit-game");
+const quitButtons = document.getElementsByClassName("quit-button");
+const restartButtons = document.getElementsByClassName("restart-button");
 
 // the 3 main screens shown and hidden throughout the game
 const introScreen = document.querySelector(".intro-screen");
@@ -39,10 +39,17 @@ const winner = document.getElementById('winner');
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-  startBtn.addEventListener('click', startGame);
-  restartBtn.addEventListener('click', restartGame);
-  quitBtn.addEventListener('click', quitGame);
-});
+
+    startBtn.addEventListener('click', startGame);
+  
+    for (let button of restartButtons) {
+      button.addEventListener('click', restartGame);
+    }
+  
+    for (let button of quitButtons) {
+      button.addEventListener('click', quitGame);
+    }
+  });
 
 
 /**Function that adds the hide class to the intro screen and removes the hide class 

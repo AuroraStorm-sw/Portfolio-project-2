@@ -2,19 +2,18 @@
 
                     /* GENERAL */
 
-* {
-    margin: 0;
-    padding: 0;
+html {
+    height: 100%;
 }
-
 body {
-    background-image: url("img/background.jpg");
+    /* background: rgb(191,196,46);
+    background: radial-gradient(circle, rgba(191,196,46,1) 34%, rgba(193,46,7,1) 100%); */
+
+    background-image: url("../img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
-    /* backup background color */
-    background-color: blanchedalmond;
+
 }
 
 h1, button {
@@ -41,7 +40,6 @@ button {
     border-radius: 5px;
 
     cursor: pointer;
-
 }
 
 button:hover {
@@ -52,7 +50,6 @@ button:hover {
 
 
 .intro-screen, .outro-screen {
-    height: 60vh;
     width: 60vw;
 
     /* centering the screen */
@@ -86,48 +83,46 @@ button:hover {
 .hide {
     opacity: 0;
     pointer-events: none;
-    /* ADD FADE OUT TRANSITION */
 }
 
 .fadeIn {
     opacity: 1;
-    /* ADD FADE IN TRANSITION */
 
+}
+
+                    /* BANNER */
+
+#banner {
+    border: 4px solid black;
+
+    background-color: rgba(185, 143, 109, 0.514);
+
+    font-size: 1.2rem;
+    text-align: center;
 }
 
                     /* SCORES */
 
 .scores {
-    padding-top: 25px;
-
-    font-size: 1.1rem;
 
     /* center scores */
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-
-.scores, 
-.battle-zone {
-    background-color: rgba(190, 190, 188, 0.5);
-}
-
+} 
 
                     /* BATTLE GROUND */
 
 .battle-zone {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
+    background-color: rgba(207, 207, 199, 0.6);
 }
 
 .battle-zone h2 {
-    font-size: 4rem;
+    padding: 10px;
     text-align: center;
 }
 
@@ -161,11 +156,20 @@ button:hover {
 /* Flips the image in the computers hand to mirror the players */
 #computer-hand {
     transform: rotateY(180deg);
-
 }
 
+/* Buttons to quit and restart the game on the playfield */
+
 .ingame-btn {
-    /* ADD STYLING */
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 2%;
+}
+
+.ingame-btn button {
+
+    margin: 0 20px;
 }
 
                     /* OUTRO SCREEN */
@@ -180,29 +184,33 @@ button:hover {
     margin: 10px;
 }
 
-                    /* MEDIA */
+                    /* MEDIA QUERY*/
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
-    .intro-screen,
-    .outro-screen {
-        height: 100vh;
+@media screen and (max-width: 300px) {
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .in-hand img {
+        margin: 0 10px;
     }
     
     .options button {
         display: inline-block;
     }
+
+    .ingame-btn button {
+       margin: 0 5px;
+    }
     
   }
 
-@media screen and (min-width: 1000px) {
-    .intro-screen,
-    .outro-screen {
-        height: 90vh;
-    }
+@media screen and (min-width: 900px) {
     
-    .intro-screen h2,
-    .outro-screen h2 {
+    h2{
         font-size: 4.5rem;
+        margin: 0;
     }
 
     .intro-screen li {
@@ -219,14 +227,17 @@ button:hover {
 
     .options button {
         width: 130%;
-        padding: 40px;
+        padding: 10px 40px;
+        margin: 40px;
     }
 
     .in-hand img {
         min-width: 50%;
+        margin: 20px;
     }
-}
 
-@media screen and (min-width: 1280px) and (max-width: ) {
-
+    
+    .ingame-btn button {
+        margin: 0 50px;
+    }
 }

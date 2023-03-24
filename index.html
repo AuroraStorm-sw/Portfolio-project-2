@@ -7,12 +7,11 @@
 
     <meta name=description content="A quick, fun game based on rock, papper, scissors">
 
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Bow, Sword, Shield</title>
 </head>
 <body>
-    
                     <!-- Introduction screen that pops up when loading the page -->
                     <!-- Contains an unordered list with all the rules for the game and a start-game button -->
 
@@ -34,46 +33,53 @@
                         <!-- Shows the 3 options of weapons to choose from -->
 
     <section class="playfield hide">
-        <div class="scores">
 
-            <div>
-                <p><b>Warrior strikes</b> = <span id="warrior-score">0</span></p>
-            </div>
-            <div>
-                <p><b>Opponent strikes</b> = <span id="computer-score">0</span></p>
-            </div>
+        <div id="banner">
+            <h1>BOW, SWORD, SHIELD</h1>
         </div>
+
 
         <div class="battle-zone">
+                        <!-- scores showing on the top of the screen with numbers wrapped in spans to be added to in the script file-->
+
+            <div class="scores">
+                <div>
+                    <p><b>Warrior strikes</b> = <span id="warrior-score">0</span></p>
+                </div>
+                <div>
+                    <p><b>Opponent strikes</b> = <span id="computer-score">0</span></p>
+                </div>
+            </div>    
             <h2><span id="winner">Let the battle begin!</span></h2>
 
+                        <!-- shows the image of what weapon the player and computer chose -->
             <div class="in-hand">
-                <img id="warrior-hand" src="assets/img/front.jpg" alt="start image of a bow, shield, and sword">
+                <img id="warrior-hand" src="assets/img/front.jpg"start image of a bow, shield, and sword">
                 <img id="computer-hand" src="assets/img/front.jpg" alt="start image of a bow, shield, and sword">
             </div>
-            <div class="options">
-                <button aria-label="click to choose shield" data-choice="shield" class="shield"><img src="assets/img/shield.jpg" alt="shield"></button>
-                <button aria-label="click to choose bow" data-choice="bow" class="bow"><img src="assets/img/bow.jpg" alt="bow"></button>
-                <button aria-label="click to choose sword" data-choice="sword" class="sword"><img src="assets/img/sword.jpg" alt="sword"></button>
-            </div>
+                        <!-- the 3 different options of weapons to choose from -->
+                        <div class="options">
+                            <button aria-label="click to choose shield" data-choice="shield" class="shield"><img src="assets/img/shield.jpg" alt="shield"></button>
+                            <button aria-label="click to choose bow" data-choice="bow" class="bow"><img src="assets/img/bow.jpg" alt="bow"></button>
+                            <button aria-label="click to choose sword" data-choice="sword" class="sword"><img src="assets/img/sword.jpg" alt="sword"></button>
+                        </div>
                     <!-- Adds buttons to restart or quit the game while playing -->
-            <span class="ingame-btn">
-                <button aria-label="click to start a new game" id="restart-game">Restart the battle</button>
-                <button aria-label="click to quit the game" id="quit-game">I've had enough</button>
-            </span>
-        </div>
+                    <div class="ingame-btn">
+                        <button aria-label="click to start a new game" class="restart-button">Restart the battle</button>
+                         <button aria-label="click to quit the game" class="quit-button">I've had enough</button>
+                    </div>
     </section>
 
                     <!-- Outro screen that pops up when the player or opponent has reached 5 points -->
                     <!-- gives the option to restart or quit the game -->
 
-    <div class="outro-screen hide">
-        <h2><span id="result">Well fought!</span></h2>
-        <p>As they say, the battle may be over, but the war has just started!</p>
-        <p>Do you want to pursue another fight?</p>
-        <button aria-label="click to start a new game" id="restart-game">Let me at them!</button>
-        <button aria-label="click to quit the game" id="quit-game">Enough fighting for today.</button>
-    </div>
+                    <div class="outro-screen hide">
+                        <h2><span id="result">Well fought!</span></h2>
+                        <p>As they say, the battle may be over, but the war has just started!</p>
+                        <p>Do you want to pursue another fight?</p>
+                        <button aria-label="click to start a new game" class="restart-button">Let me at them!</button>
+                        <button aria-label="click to quit the game" class="quit-button">Enough fighting for today.</button>
+                    </div>
 
                     <!-- Script link-->
 
