@@ -36,6 +36,9 @@ const winner = document.getElementById('winner');
 /** 
  * event listeners are added after the DOM content has loaded to ensure everything
  * is responsive. 
+ * The for loop for the restart and quit buttons is all done with help from former course student
+ * Tony Albanese, who helped me understand how this works in order to get the buttons to call the 
+ * same function on different parts of a webpage.
 */
 
 document.addEventListener("DOMContentLoaded", function () {
