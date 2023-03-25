@@ -1,24 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Palanquin&family=Tangerine:wght@700&display=swap');
 
-                    /* GENERAL */
+/* GENERAL */
 
 body {
     margin: 0;
     padding: 0;
+
+    background: rgb(255, 0, 0);
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 0%, rgba(200, 82, 8, 0.5) 35%, rgba(165, 240, 255, 0.6502976190476191) 100%);
 }
 
-#background {
-    height: 100vh;
-
-    position: relative;
-    
-    background-image: url("../img/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-h1, button {
+h1,
+button {
     font-family: Lora, Courier, monospace;
 }
 
@@ -27,7 +20,8 @@ h2 {
     font-size: 2.5rem;
 }
 
-p, li {
+p,
+li {
     font-family: Palanquin, Courier, monospace;
     font-size: 1.2rem;
 }
@@ -37,7 +31,7 @@ button {
     padding: 5%;
 
     font-size: 1.1rem;
-    
+
     border: 1px solid;
     border-radius: 5px;
 
@@ -48,10 +42,11 @@ button:hover {
     transform: scale(1.1);
 }
 
-                    /* INTRO SCREEN WITH RULES AND GAME START */
+/* INTRO SCREEN WITH RULES AND GAME START */
 
 
-.intro-screen, .outro-screen {
+.intro-screen,
+.outro-screen {
     width: 60vw;
 
     position: absolute;
@@ -61,15 +56,15 @@ button:hover {
     text-align: center;
 
     padding: 10px;
-    
-    border:  5px solid rgb(138, 132, 132);
+
+    border: 5px solid rgb(138, 132, 132);
     border-radius: 5px;
     background-color: rgba(207, 207, 199, 0.6);
 }
 
-.intro-screen h1{
+.intro-screen h1 {
     padding: 10px;
- 
+
 }
 
 .intro-screen h2 {
@@ -90,26 +85,26 @@ button:hover {
 
 }
 
-                    /* BANNER */
+/* BANNER */
 
 #banner {
     text-align: center;
 }
 
-#banner h1{
+#banner h1 {
     text-decoration: underline;
 }
 
-                    /* SCORES */
+/* SCORES */
 
 .scores {
 
     /* center scores */
     display: flex;
     flex-direction: row;
-} 
+}
 
-                    /* BATTLE GROUND */
+/* BATTLE GROUND */
 
 .battle-zone {
 
@@ -117,8 +112,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-
-    background-color: rgba(207, 207, 199, 0.6);
 }
 
 .battle-zone h2 {
@@ -126,18 +119,19 @@ button:hover {
     text-align: center;
 }
 
-.in-hand img{
+.in-hand img {
     max-width: 40vw;
-    
+
     border-radius: 10px;
     margin: 0 20px;
 }
 
-.options, .in-hand {
+.options,
+.in-hand {
     display: flex;
 
     margin: 0;
-} 
+}
 
 .options img {
     width: 100%;
@@ -172,7 +166,7 @@ button:hover {
     margin: 0 20px;
 }
 
-                    /* OUTRO SCREEN */
+/* OUTRO SCREEN */
 .outro-screen {
     display: flex;
     flex-direction: column;
@@ -180,22 +174,23 @@ button:hover {
     align-items: center;
 }
 
-.outro-screen h2, p {
+.outro-screen h2,
+p {
     margin: 10px;
 }
 
-                    /* MEDIA QUERY*/
+/* MEDIA QUERY*/
 
 @media screen and (max-width: 500px) {
-    #banner h1{
+    #banner h1 {
         font-size: 1.2rem;
     }
-    
+
     .intro-screen h1,
     .outro-screen h1 {
         font-size: 1.5rem;
     }
-    
+
     .intro-screen h2,
     .outro-screen h2 {
         font-size: 2.5rem;
@@ -212,19 +207,19 @@ button:hover {
     .in-hand img {
         margin: 0 10px;
     }
-    
+
     .options button {
         display: inline-block;
     }
 
     .ingame-btn button {
-       margin: 0 5px;
+        margin: 0 5px;
     }
-    
-  }
+
+}
 
 @media screen and (min-width: 900px) {
-    h2{
+    h2 {
         font-size: 4.5rem;
         margin: 0;
     }
@@ -232,17 +227,13 @@ button:hover {
     .intro-screen li {
         font-size: 1.5rem;
     }
-    
+
     .outro-screen p {
         font-size: 1.2rem;
     }
 
     .scores p {
         font-size: 1.5rem;
-    }
-
-    .battle-zone {
-        height: 100vh;
     }
 
     .options button {
@@ -256,7 +247,7 @@ button:hover {
         margin: 20px;
     }
 
-    
+
     .ingame-btn button {
         margin: 0 50px;
     }

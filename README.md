@@ -81,7 +81,7 @@ These were all picked out from generating font via https://fontjoy.com/
 The fonts were then imported from https://fonts.google.com
 
 ## Images
-![background](assets/img/background.jpg)
+
 ![bow](assets/img/bow.jpg)
 ![shield](assets/img/shield.jpg)
 ![sword](assets/img/sword.jpg)
@@ -147,6 +147,7 @@ The website has been manually tested for responsiveness across Firefox, Google C
 | Win a game | When player reaches 5 points, show the outro screen with 'win game' message | Pass |
 | Restart game | The game resets with sword images showing in hand | Pass |
 | Quit game | The playfield disappears and the intro screen shows up | Pass
+
 # Bugs
 
 ## Fixed bugs
