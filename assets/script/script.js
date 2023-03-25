@@ -128,16 +128,16 @@ function decideWinner() {
         computerScore++;
       } else if (userPick === 'bow' && computerPick === 'shield'){
         winner.innerHTML = 'Opponent wins!';
-        warriorScore++;
+        computerScore++;
       } else if (userPick === 'bow' && computerPick === 'sword'){
         winner.innerHTML = 'Warrior wins!';
-        computerScore++;
+        warriorScore++;
       } else if (userPick === 'sword' && computerPick === 'shield') {
         winner.innerHTML = 'Warrior wins!';
-        computerScore++;
+        warriorScore++;
       } else if (userPick === 'sword' && computerPick === 'bow') {
         winner.innerHTML = 'Opponent wins!';
-        warriorScore++;
+        computerScore++;
       } else {
         winner.innerHTML = "It's a tie!";
       }
