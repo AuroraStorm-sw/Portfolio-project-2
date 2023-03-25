@@ -81,11 +81,22 @@ These were all picked out from generating font via https://fontjoy.com/
 The fonts were then imported from https://fonts.google.com
 
 ## Images
-
-
-
+![background](assets/img/background.jpg)
+![bow](assets/img/bow.jpg)
+![shield](assets/img/shield.jpg)
+![sword](assets/img/sword.jpg)
 
 # Features
+
+![intro](assets/img/intro-img.PNG)
+![playfield](assets/img/playfield-img.PNG)
+![banner](assets/img/banner.PNG)
+![scores](assets/img/scores.PNG)
+![in-hand](assets/img/player-pc-hands.PNG)
+![buttons](assets/img/buttons.PNG)
+![reset-quit](assets/img/playfield-btn.PNG)
+![player-won](assets/img/won.PNG)
+![player-lost](assets/img/lost.PNG)
 
 
 # Features Left To Implement
@@ -126,10 +137,16 @@ The fonts were then imported from https://fonts.google.com
 
 The website has been manually tested for responsiveness across Firefox, Google Chrome, and Edge on PC and on mobile on Samsung Galaxy S20.
 
-| Action | Expected Behavior | Actual Behavior |
-| :——-| :-—- | :-—- |
-| test | test | test |
 
+| Action        | Expected Behavior     | Actual Behavior |
+|--------------|:-----------:|------------:|
+| Load in the page | The intro page shows up and renders fully | Pass  |
+| Click start game button | Hide the intro screen and show the playfield | Pass  |
+| Click different buttons to play game | Images of clicked buttons show up on screen on click | Pass |
+| Lose a game | When opponent reaches 5 points, show the outro screen with 'lost game' message | Pass |
+| Win a game | When player reaches 5 points, show the outro screen with 'win game' message | Pass |
+| Restart game | The game resets with sword images showing in hand | Pass |
+| Quit game | The playfield disappears and the intro screen shows up | Pass
 # Bugs
 
 ## Fixed bugs
