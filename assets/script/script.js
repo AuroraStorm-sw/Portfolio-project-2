@@ -55,6 +55,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+function onOptionClick(){
+  const computerOption = () => {
+    let pick = Math.floor(Math.random() * computerOptions.length);
+    if(pick === 0) {
+        computerPick = 'shield';
+    } else if(pick === 1) {
+        computerPick = 'bow';
+    } else {
+        computerPick = 'sword';
+    }
+
+    if (this.getAttribute('data-choice') === 'shield') userPick = 'shield';
+    else if (this.getAttribute('data-choice') === 'bow') userPick = 'bow';
+    else userPick = 'sword';
+  };
+    
+    computerOption();
+    decideWinner();
+    updateImg();
+    updateScore();
+    gameOver();
+}
 /**Function that adds the hide class to the intro screen and removes the hide class 
  * from the match screen
 */
@@ -83,30 +105,7 @@ function playMatch() {
       */
 
       options.forEach(option => {
-      option.addEventListener('click', function() {
-      
-      const computerOption = () => {
-      let pick = Math.floor(Math.random() * computerOptions.length);
-      if(pick === 0) {
-          computerPick = 'shield';
-      } else if(pick === 1) {
-          computerPick = 'bow';
-      } else {
-          computerPick = 'sword';
-      }
-
-      if (this.getAttribute('data-choice') === 'shield') userPick = 'shield';
-      else if (this.getAttribute('data-choice') === 'bow') userPick = 'bow';
-      else userPick = 'sword';
-    };
-      
-      computerOption();
-      decideWinner();
-      updateImg();
-      updateScore();
-      gameOver();
-     
-    });
+      option.addEventListener('click', onOptionClick); //Put the reference to onOptionClick here.
 
   });
 }
@@ -230,6 +229,11 @@ function restartGame() {
  */
 
 function quitGame() {
+  //Deregister your listeners here.
+
+  options.forEach(option => {
+    option.removeEventListener('click', onOptionClick)
+  })
 
   warriorScore = 0;
   computerScore = 0;
