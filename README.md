@@ -82,19 +82,47 @@ The fonts were then imported from https://fonts.google.com
 
 ## Images
 
+All three images are downloaded from https://www.vecteezy.com/members/iyikon.
+I chose them to have a toon-ish/fun feel that adds amusement to the "seriousness" of fighting out a battle, also because the images all match in tone.
+
 ![bow](assets/img/bow.jpg)
 ![shield](assets/img/shield.jpg)
 ![sword](assets/img/sword.jpg)
 
 # Features
 
+The website is made up of 3 overlapping sections that are hidden shown as needed throughout the game.
+
+- The first one is an introduction screen that explains the rules of the game, which weapon beats which, and then a button to start a game.
+
 ![intro](assets/img/intro-img.PNG)
+
+- The second screen is the playfield that is made up of 6 different components
+
 ![playfield](assets/img/playfield-img.PNG)
+
+- First up is a banner with the game title that sits ontop of the playfield
 ![banner](assets/img/banner.PNG)
+
+- Below are the scores for the player and the computer that updates after each button click
 ![scores](assets/img/scores.PNG)
+
+- Below the scores is what I've named the "winner" headline that first urges the player to pick a weapon to start the game, and then will switch to announce if the player or the computer won a score for the round, or if it's a tie.
+![match-test](assets/img/match-text.PNG)
+![winner-win](assets/img/winner-text.PNG)
+![winner-lose](assets/img/opponent-text.PNG)
+![winner-tie](assets/img/tie-text.PNG)
+
+- Then are the hands of the player and opponent, at first showing an image of all weapons to indicate the game hasn't started yet. These images changes thoughout the game depending on what the player and computer picks.
 ![in-hand](assets/img/player-pc-hands.PNG)
+
+- Below the hands are the play-buttons with available weapons to choose from.
 ![buttons](assets/img/buttons.PNG)
+
+- Below the play-buttons are 2 buttons for the player if they decide to restart the game ("Restart the battle") or quit the game ("I've had enough").
 ![reset-quit](assets/img/playfield-btn.PNG)
+
+- Then the game is over, an outro screen pops up informing the player of their win or loss, also allowing them to either restart another match ("Let me at them!") or quit the game, which returns the player to the intro screen ("Enough fighting for today").
 ![player-won](assets/img/won.PNG)
 ![player-lost](assets/img/lost.PNG)
 

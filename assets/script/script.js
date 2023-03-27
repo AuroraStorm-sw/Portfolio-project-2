@@ -54,6 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+/**
+ * function that adds event listener for when someone clicks on one of the game buttons, followed  
+ * by a Math library that randomly picks one of the three options for the computer; shield, bow, or sword. This
+ * is then stored in the variable computeOption.
+ * Below is an 'if else' statement that grabs the data-choice from the index.html and stores it in userPick
+ * for later use when deciding winner.
+ * Following is the calling of 5 functions that holds all the different game operations
+ */
+
+/**Using 'else if' as a way to decide the player and computer choices was inspired from 
+* https://github.com/kpsdev1 / https://github.com/kpsdev1/Rock-Paper-Scissors/blob/main/assets/js/script.js
+* I found this while searching for a tutorial/ideas for how to solve picking out how the different
+* choices were to be implemented
+*/
 
 function onOptionClick(){
   const computerOption = () => {
@@ -88,24 +102,10 @@ function startGame() {
   playMatch();
 }
 
-/**
- * function to play a match, adds event listener for when someone clicks on one of the game buttons, followed  
- * by a Math library that randomly picks one of the three options for the computer; shield, bow, or sword. This
- * is then stored in the variable computeOption.
- * Below is an 'if else' statement that grabs the data-choice from the index.html and stores it in userPick
- * for later use when deciding winner.
- * Following is the calling of 5 functions that holds all the different game operations
- */
 function playMatch() {
- 
-      /**Using 'else if' as a way to decide the player and computer choices was inspired from 
-      * https://github.com/kpsdev1 / https://github.com/kpsdev1/Rock-Paper-Scissors/blob/main/assets/js/script.js
-      * I found this while searching for a tutorial/ideas for how to solve picking out how the different
-      * choices were to be implemented
-      */
 
       options.forEach(option => {
-      option.addEventListener('click', onOptionClick); //Put the reference to onOptionClick here.
+      option.addEventListener('click', onOptionClick);
 
   });
 }
