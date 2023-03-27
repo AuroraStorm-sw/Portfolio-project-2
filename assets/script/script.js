@@ -232,8 +232,8 @@ function quitGame() {
   //Deregister your listeners here.
 
   options.forEach(option => {
-    option.removeEventListener('click', onOptionClick)
-  })
+    option.removeEventListener('click', onOptionClick);
+  });
 
   warriorScore = 0;
   computerScore = 0;

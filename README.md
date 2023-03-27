@@ -1,5 +1,5 @@
 
-![responsive img](assets/img/responsive.png)
+![responsive img](documentation/responsive.png)
 
 Full responsive site [here](https://ui.dev/amiresponsive?url=https://aurorastorm-sw.github.io/Portfolio-project-2/)
 
@@ -54,13 +54,13 @@ All wireframes are made with Balsamiq Wireframes.
 
 Intro screen
 
-![intro-wireframe](assets/img/intro-wireframe.PNG)
+![intro-wireframe](documentation/intro-wireframe.PNG)
 
 Playfield
-![playfield-wireframe](assets/img/playfield-wireframe.PNG)
+![playfield-wireframe](documentation/playfield-wireframe.PNG)
 
 Outro screen
-![outro-wireframe](assets/img/outro-wireframe.PNG)
+![outro-wireframe](documentation/outro-wireframe.PNG)
 
 
 
@@ -71,7 +71,7 @@ At first, my palette idea for this project was earthy, woodsy tones with a backg
 I ended up picking a gradient based on the colors of the weapons design that is bright enough for all the text elements to pop, but dull enough that it doesn't take the attention away from the game itself. 
 
 With the help of https://cssgradient.io/, I got a pale, linear gradient with 
-- red - #ff0000/rgba(255, 0, 0, 0.5)
+- red - /rgba(255, 0, 0, 0.5)
 - orange/brown - #c85208/rgba(200, 82, 8, 0.5)
 - icy blue - #a5f0ff/rgba(165, 240, 255, 0.6)
 
@@ -105,42 +105,42 @@ The website is made up of 3 overlapping sections that are hidden shown as needed
 
 - The first one is an introduction screen that explains the rules of the game, which weapon beats which, and then a button to start a game.
 
-![intro](assets/img/intro-img.PNG)
+![intro](documentation/intro-img.PNG)
 
 - The second screen is the playfield that is made up of 6 different components
 
-![playfield](assets/img/playfield-img.PNG)
+![playfield](documentation/playfield-img.PNG)
 
 - First up is a banner with the game title that sits ontop of the playfield
-![banner](assets/img/banner.PNG)
+![banner](documentation/banner.PNG)
 
 - Below are the scores for the player and the computer that updates after each button click
-![scores](assets/img/scores.PNG)
+![scores](documentation/scores.PNG)
 
 - Below the scores is what I've named the "winner" headline that first urges the player to pick a weapon to start the game, and then will switch to announce if the player or the computer won a score for the round, or if it's a tie.
 
-![match-test](assets/img/match-text.PNG)
-![winner-win](assets/img/winner-text.PNG)
-![winner-lose](assets/img/opponent-text.PNG)
-![winner-tie](assets/img/tie-text.PNG)
+![match-test](documentation/match-text.PNG)
+![winner-win](documentation/winner-text.PNG)
+![winner-lose](documentation/opponent-text.PNG)
+![winner-tie](documentation/tie-text.PNG)
 
 - Then are the hands of the player and opponent, at first showing an image of all weapons to indicate the game hasn't started yet. These images changes thoughout the game depending on what the player and computer picks.
 
-![in-hand](assets/img/player-pc-hands.PNG)
+![in-hand](documentation/player-pc-hands.PNG)
 
 - Below the hands are the play-buttons with available weapons to choose from.
 
-![buttons](assets/img/buttons.PNG)
+![buttons](documentation/buttons.PNG)
 
 - Below the play-buttons are 2 buttons for the player if they decide to restart the game ("Restart the battle") or quit the game ("I've had enough"). If the battle is restarted, the hands will be holding a sword instead of the collective weapons image.
 
-![reset-quit](assets/img/playfield-btn.PNG)
-![reset-hands](assets/img/restart.png)
+![reset-quit](documentation/playfield-btn.PNG)
+![reset-hands](documentation/restart.png)
 
 - Then the game is over, an outro screen pops up informing the player of their win or loss, also allowing them to either restart another match ("Let me at them!") or quit the game, which returns the player to the intro screen ("Enough fighting for today").
 
-![player-won](assets/img/won.PNG)
-![player-lost](assets/img/lost.PNG)
+![player-won](documentation/won.PNG)
+![player-lost](documentation/lost.PNG)
 
 
 # Features Left To Implement
@@ -149,18 +149,20 @@ The website is made up of 3 overlapping sections that are hidden shown as needed
 # Testing
 
 ## Validator testing
- [See full HTML validation here]()
+ [See full HTML validation here](https://validator.w3.org/nu/?doc=https%3A%2F%2Faurorastorm-sw.github.io%2FPortfolio-project-2%2F)
 
-
-![HTML validation]()
+![HTML validation](documentation/html-validation.PNG)
  
- [See full CSS validation here]()
+ [See full CSS validation here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faurorastorm-sw.github.io%2FPortfolio-project-2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-![CSS validation]()
+![CSS validation](documentation/css-validate.PNG)
 
-[Contrast check]()
+[Javascript validation](https://jshint.com/)
+![script-validation]()
 
-![Color image link]()
+[Contrast check](https://color.a11y.com/)
+
+![Contrast](documentation/contrast-check.png)
 
 
 ## Lighthouse testing
