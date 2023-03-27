@@ -89,8 +89,8 @@ button:hover {
 
 /* BANNER */
 
+
 .banner p{
-    font-size: 2rem;
     text-align: center;
 }
 
@@ -182,9 +182,6 @@ p {
 /* MEDIA QUERY*/
 
 @media screen and (max-width: 500px) {
-    #banner h1 {
-        font-size: 1.2rem;
-    }
 
     .intro-screen h1,
     .outro-screen h1 {
@@ -222,6 +219,10 @@ p {
     h2 {
         font-size: 4.5rem;
         margin: 0;
+    }
+
+    .banner p{
+        font-size: 2rem;
     }
 
     .intro-screen li {
