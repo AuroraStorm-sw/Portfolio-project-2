@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name=description content="A quick, fun game based on rock, papper, scissors">
 
+    <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
+    <!-- Style sheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Bow, Sword, Shield</title>
 </head>
 
 <body>
-    <div id="background">
+    
         <!-- Introduction screen that pops up when loading the page -->
         <!-- Contains an unordered list with all the rules for the game and a start-game button -->
 
         <div class="intro-screen">
+            <div class="banner">
+                <p>BOW SWORD SHIELD</p>
+            </div>
             <h1>Welcome to the battle!</h1>
             <h2>How to fight</h2>
             <ul>
@@ -41,8 +45,8 @@
 
             <div class="battle-zone">
 
-                <div id="banner">
-                    <h1>BOW SWORD SHIELD</h1>
+                <div class="banner">
+                    <p>BOW SWORD SHIELD</p>
                 </div>
 
                 <!-- scores showing on the top of the screen with numbers wrapped in spans to be added to in the script file-->
@@ -59,7 +63,7 @@
 
                 <!-- shows the image of what weapon the player and computer chose -->
                 <div class="in-hand">
-                    <img id="warrior-hand" src="assets/img/front.jpg" alt ="start image of a bow, shield, and sword">
+                    <img id="warrior-hand" src="assets/img/front.jpg" alt="start image of a bow, shield, and sword">
                     <img id="computer-hand" src="assets/img/front.jpg" alt="start image of a bow, shield, and sword">
                 </div>
                 <!-- the 3 different options of weapons to choose from -->
@@ -76,6 +80,7 @@
                     <button aria-label="click to start a new game" class="restart-button">Restart the battle</button>
                     <button aria-label="click to quit the game" class="quit-button">I've had enough</button>
                 </div>
+            </div>
         </section>
 
         <!-- Outro screen that pops up when the player or opponent has reached 5 points -->
@@ -88,11 +93,10 @@
             <button aria-label="click to start a new game" class="restart-button">Let me at them!</button>
             <button aria-label="click to quit the game" class="quit-button">Enough fighting for today.</button>
         </div>
-    </div>
+    
 
     <!-- Script link-->
 
     <script src="assets/script/script.js"></script>
 </body>
-
 </html>

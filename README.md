@@ -1,9 +1,9 @@
 
-![responsive img]()
+![responsive img](assets/img/responsive.png)
 
-Full responsive site [here]()
+Full responsive site [here](https://ui.dev/amiresponsive?url=https://aurorastorm-sw.github.io/Portfolio-project-2/)
 
-### [Full website here](https://aurorastorm-sw.github.io/Portfolio-project-1/index.html)
+### [Full website here](https://aurorastorm-sw.github.io/Portfolio-project-2/)
 
 # Table of contents
 
@@ -21,7 +21,6 @@ Full responsive site [here]()
     - [Fonts](#fonts)
     - [Images](#images)
 - [Features](#features)
-    - [Home](#home)
         - [Features left to implement](#features-left-to-implement)
 - [Testing](#testing)
     - [Validator testing](#validator-testing)
@@ -63,31 +62,42 @@ Playfield
 Outro screen
 ![outro-wireframe](assets/img/outro-wireframe.PNG)
 
-## Home
 
 
 # Designs
 
 ## Colors
+At first, my palette idea for this project was earthy, woodsy tones with a background of a viking shield, but using an image for a background ended up being too difficult to made fully responsive on all screens. 
+I ended up picking a gradient based on the colors of the weapons design that is bright enough for all the text elements to pop, but dull enough that it doesn't take the attention away from the game itself. 
+
+With the help of https://cssgradient.io/, I got a pale, linear gradient with 
+- red - #ff0000/rgba(255, 0, 0, 0.5)
+- orange/brown - #c85208/rgba(200, 82, 8, 0.5)
+- icy blue - #a5f0ff/rgba(165, 240, 255, 0.6)
+
+This color combination doesn't line up with what I first intended, but when adding it as a background I felt pleased that it adds to the more playful vibe. 
 
 ## Fonts
-When picking fonts for this project, I wanted something that feels 'viking-esque' without making it cartoonish. 
-The fonts I ended up chosing are; 
-Lora for H1 headings
-Tangerine for H2
-Palanquin for list items and paragraphs
+When picking fonts for this project, I wanted something that feels 'viking-esque' without making it too cartoonish. The fonts I ended up chosing are; 
+- Lora for H1 headings
+- Tangerine for H2
+- Palanquin for list items and paragraphs
 
 These were all picked out from generating font via https://fontjoy.com/
+
 The fonts were then imported from https://fonts.google.com
 
 ## Images
 
-All three images are downloaded from https://www.vecteezy.com/members/iyikon.
+All images are downloaded from https://www.vecteezy.com/members/iyikon.
 I chose them to have a toon-ish/fun feel that adds amusement to the "seriousness" of fighting out a battle, also because the images all match in tone.
+
+The image of the combined weapons is made by me by cutting each weapon out and combining in Paint.
 
 ![bow](assets/img/bow.jpg)
 ![shield](assets/img/shield.jpg)
 ![sword](assets/img/sword.jpg)
+![front](assets/img/front.jpg)
 
 # Features
 
@@ -108,21 +118,27 @@ The website is made up of 3 overlapping sections that are hidden shown as needed
 ![scores](assets/img/scores.PNG)
 
 - Below the scores is what I've named the "winner" headline that first urges the player to pick a weapon to start the game, and then will switch to announce if the player or the computer won a score for the round, or if it's a tie.
+
 ![match-test](assets/img/match-text.PNG)
 ![winner-win](assets/img/winner-text.PNG)
 ![winner-lose](assets/img/opponent-text.PNG)
 ![winner-tie](assets/img/tie-text.PNG)
 
 - Then are the hands of the player and opponent, at first showing an image of all weapons to indicate the game hasn't started yet. These images changes thoughout the game depending on what the player and computer picks.
+
 ![in-hand](assets/img/player-pc-hands.PNG)
 
 - Below the hands are the play-buttons with available weapons to choose from.
+
 ![buttons](assets/img/buttons.PNG)
 
-- Below the play-buttons are 2 buttons for the player if they decide to restart the game ("Restart the battle") or quit the game ("I've had enough").
+- Below the play-buttons are 2 buttons for the player if they decide to restart the game ("Restart the battle") or quit the game ("I've had enough"). If the battle is restarted, the hands will be holding a sword instead of the collective weapons image.
+
 ![reset-quit](assets/img/playfield-btn.PNG)
+![reset-hands](assets/img/restart.png)
 
 - Then the game is over, an outro screen pops up informing the player of their win or loss, also allowing them to either restart another match ("Let me at them!") or quit the game, which returns the player to the intro screen ("Enough fighting for today").
+
 ![player-won](assets/img/won.PNG)
 ![player-lost](assets/img/lost.PNG)
 
@@ -202,6 +218,7 @@ Steps I took to deploy my website;
 - A few minutes later, upon refreshing the page, my site was live
 
 ## Tools
+- Windows Paint
 - https://balsamiq.com/ - Balsamiq Wireframes
 - https://tinypng.com/ - Image compression
 - https://ui.dev/amiresponsive - Responsiveness testing
@@ -213,11 +230,14 @@ Steps I took to deploy my website;
 
 # Credits
 
-- ReadMe layout taken from my previous project, Portfolio-Project-1, and adjusted for this project. Inspiration for that was picked from various projects from other Code Institute students from the #peer-code-review forum and https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md#deployment
+- ReadMe layout taken from my previous project, [Portfolio-Project-1](https://github.com/AuroraStorm-sw/Portfolio-project-1), and adjusted for this project. Inspiration for that was picked from various projects from other Code Institute students from the #peer-code-review forum and https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md#deployment
 
 - Code institute's template: https://github.com/Code-Institute-Org/gitpod-full-template
 
 - I followed along tutorials from [developedbyed](https://www.youtube.com/watch?v=qWPtKtYEsN4&t=2811s) and [Code with Ania Kubów](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=764s) on [YouTube](https://www.youtube.com/) to better understand the process of creating a rock, paper, scissors type game and what functions are needed to get it to work.
+
+Background color gradient:
+- https://cssgradient.io/
 
 Flavicon:
 - Image converted with https://favicon.io/favicon-converter/
@@ -230,7 +250,4 @@ Images:
 Shield: https://www.vecteezy.com/vector-art/425257-vector-shield-icon
 Bow: https://www.vecteezy.com/vector-art/423523-bow-icon-vector-illustration
 Sword: https://www.vecteezy.com/vector-art/420638-weapons-icon-vector-illustration
-
-
-Sources:
 
