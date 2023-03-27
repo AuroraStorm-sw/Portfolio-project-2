@@ -158,7 +158,7 @@ The website is made up of 3 overlapping sections that are hidden shown as needed
 ![CSS validation](documentation/css-validate.PNG)
 
 [Javascript validation](https://jshint.com/)
-![script-validation]()
+![script-validation](documentation/jshint-result.PNG)
 
 [Contrast check](https://color.a11y.com/)
 
@@ -167,16 +167,15 @@ The website is made up of 3 overlapping sections that are hidden shown as needed
 
 ## Lighthouse testing
 
-[Full test here]()
-
-![Lighthouse test]()
-
+![Lighthouse test](documentation/lighthouse-report.png)
 
 ## Wave testing
 
-![Wave test](documentation/WAVE-report.png)
+[Full WAVE test](https://wave.webaim.org/report#/https://aurorastorm-sw.github.io/Portfolio-project-2/)
 
-[Full test here]()
+![Wave test](documentation/wave-result.png)
+
+
 
 
 ## Manual Testing
@@ -205,6 +204,8 @@ Solved: Got adviced by a Slack member that the console.log was placed above the 
 
 - After adding two additional buttons to the playfield, one for resetting the game and one for quitting, the buttons on the outro screen with the same function stopped working. After a lot of back and forth, got guided by a Slack member on how to properly loop through buttons so they initialize the same function over and over again on different parts of the webpage.
 
+- Following the issue with the two additional buttons, the scoring acted weirdly after resetting the game mid-match and starting a new game. Turns out the event listeners for the game buttons were called twice, once when the game first starts and then again when resetting and starting again. Solved this with help from Slack member by removing the event listerens in the quitGame() function, so the event listeners are only called once when clicking the button to start the game.
+
 - The logics of the rules didn't apply as planned, turned out I had entered the incorrect order into the 'if else' statement deciding which weapon wins over the other.
 
 
@@ -219,6 +220,12 @@ Steps I took to deploy my website;
 - Select to deploy from main branch
 - A few minutes later, upon refreshing the page, my site was live
 
+For anyone wishing to Fork this repository, then do as follows;
+
+- Log in to GitHub and find your way to the GitHub repository you want, in this case my [portfolio project 2](https://github.com/AuroraStorm-sw/Portfolio-project-2)
+- Up in the right corner of the repository page, on the row of buttons just beneath the user icon, you'll find the "Fork" button.
+- Click the "Fork" button and you will now have created a copy of the repository to your GitHub account.
+
 ## Tools
 - Windows Paint
 - https://balsamiq.com/ - Balsamiq Wireframes
@@ -226,7 +233,9 @@ Steps I took to deploy my website;
 - https://ui.dev/amiresponsive - Responsiveness testing
 - https://jigsaw.w3.org/css-validator/validator - CSS validation
 - https://validator.w3.org/ - HTML validator
-- https://contrast-grid.eightshapes.com/ - Contrast checker
+- https://jshint.com/ - Javascript validator
+- https://color.a11y.com/ - Contrast checker
+- https://wave.webaim.org/ - Accessibility evaluation
 - https://developer.chrome.com/docs/devtools/ - Responsiveness testing/bug searching throughout the process
 - https://www.w3schools.com/ & https://developer.mozilla.org/en-US/ - Visited several times during the projet to help get codes written correctly.
 
