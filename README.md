@@ -187,10 +187,10 @@ The website has been manually tested for responsiveness across Firefox, Google C
 |--------------|:-----------:|------------:|
 | Load in the page | The intro page shows up and renders fully | Pass  |
 | Click start game button | Hide the intro screen and show the playfield | Pass  |
-| Click different buttons to play game | Images of clicked buttons show up on screen on click | Pass |
+| Click different buttons to play game | Images of clicked buttons show up on screen on click and match the set logic between which weapon that wins over which| Pass |
 | Lose a game | When opponent reaches 5 points, show the outro screen with 'lost game' message | Pass |
 | Win a game | When player reaches 5 points, show the outro screen with 'win game' message | Pass |
-| Restart game | The game resets with sword images showing in hand | Pass |
+| Restart game | The game resets with sword images showing in hand, scores are reset, and the in-hand images are changed to swords | Pass |
 | Quit game | The playfield disappears and the intro screen shows up | Pass
 
 # Bugs
@@ -241,7 +241,9 @@ For anyone wishing to Fork this repository, then do as follows;
 
 # Credits
 
-- ReadMe layout taken from my previous project, [Portfolio-Project-1](https://github.com/AuroraStorm-sw/Portfolio-project-1), and adjusted for this project. Inspiration for that was picked from various projects from other Code Institute students from the #peer-code-review forum and https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md#deployment
+- A lot of my logical issuse with JavaScript I got assistance from fellow Slack member Tony Albanese, who guided me through many of the frustrating bugs that I couldn't handle alone. Without him, this project might not have been done in time, and his assistance has been of immence value.
+
+- README layout taken from my previous project, [Portfolio-Project-1](https://github.com/AuroraStorm-sw/Portfolio-project-1), and adjusted for this project. Inspiration for that was picked from various projects from other Code Institute students from the #peer-code-review forum and https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md#deployment
 
 - Code institute's template: https://github.com/Code-Institute-Org/gitpod-full-template
 
