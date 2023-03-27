@@ -9,7 +9,6 @@ Full responsive site [here](https://ui.dev/amiresponsive?url=https://aurorastorm
 
 - [UX](#ux)
     - [User goals](#user-goals)
-        - [First-time visitor goals](#first-time-visitor-goals)
         - [Returning visitor goals](#returning-visitor-goals)
         - [As a website owner](#as-a-website-owner)
 - [Wireframes](#wireframes)
@@ -110,9 +109,9 @@ The website is made up of 3 overlapping sections that are hidden and shown as ne
 ![playfield](documentation/playfield-img.PNG)
 
 - First up is a banner with the game title that sits on top of the playfield
-![banner](documentation/banner.PNG)
+![banner](documentation/banner.png)
 
-- Below are the scores for the player and the computer that updates after each button click
+- Below are the scores for the player and the computer that updates after each point earned
 ![scores](documentation/scores.PNG)
 
 - Below the scores is what I've named the "winner" headline that first urges the player to pick a weapon to start the game and then will switch to announce if the player or the computer won a score for the round or if it's a tie.
@@ -130,7 +129,7 @@ The website is made up of 3 overlapping sections that are hidden and shown as ne
 
 ![buttons](documentation/buttons.PNG)
 
-- Below the play buttons are 2 buttons for the player if they decide to restart the game ("Restart the battle") or quit the game ("I've had enough"). If the battle is restarted, the hands will be holding a sword instead of the collective weapons image.
+- Below the play buttons are 2 buttons for the player if they decide to restart the game ("Restart the battle") or quit the game ("I've had enough"). If the battle is restarted, the hands will be holding a sword instead of the collective weapons image. If quitting the game, the player is returned to the intro screen.
 
 ![reset-quit](documentation/playfield-btn.PNG)
 ![reset-hands](documentation/restart.png)
@@ -227,19 +226,27 @@ For anyone wishing to Fork this repository, then do as follows;
 - Up in the right corner of the repository page, on the row of buttons just beneath the user icon, you'll find the "Fork" button.
 - Click the "Fork" button, and you will now have created a copy of the repository to your GitHub account.
 
-## Tools
-- Windows Paint
-- https://balsamiq.com/ - Balsamiq Wireframes
+## Tools and programs
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Microsoft Paint](https://en.wikipedia.org/wiki/Microsoft_Paint)
+- [https://balsamiq.com/](Balsamiq Wireframes)
+- [https://jigsaw.w3.org/css-validator](CSS validatior)
+- [https://validator.w3.org/](HTML validator)
+- [https://jshint.com/](Javascript validator)
+
 - https://tinypng.com/ - Image compression
 - https://ui.dev/amiresponsive - Responsiveness testing
-- https://jigsaw.w3.org/css-validator/validator - CSS validation
-- https://validator.w3.org/ - HTML validator
-- https://jshint.com/ - Javascript validator
 - https://color.a11y.com/ - Contrast checker
 - https://wave.webaim.org/ - Accessibility evaluation
+- https://fontjoy.com/ - Font generator
+- https://fonts.google.com - Font library
+- https://cssgradient.io/ - Gradient generator
+- https://favicon.io/favicon-converter/ - Favicon converter 
 - https://app.grammarly.com/ - Grammar check
 - https://developer.chrome.com/docs/devtools/ - Responsiveness testing/bug searching throughout the process
-- https://www.w3schools.com/ & https://developer.mozilla.org/en-US/ - Visited several times during the project to help get codes written correctly.
+- https://www.w3schools.com/ & https://developer.mozilla.org/en-US/ - Consulted several times during the project to help get codes written correctly.
 
 
 # Credits
@@ -251,15 +258,6 @@ For anyone wishing to Fork this repository, then do as follows;
 - Code institute's template: https://github.com/Code-Institute-Org/gitpod-full-template
 
 - I followed tutorials from [developedbyed](https://www.youtube.com/watch?v=qWPtKtYEsN4&t=2811s) and [Code with Ania Kubów](https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=764s) on [YouTube](https://www.youtube.com/) to better understand the process of creating a rock, paper, scissors type game and what functions are needed to get it to work.
-
-Background color gradient:
-- https://cssgradient.io/
-
-Favicon:
-- Image converted with https://favicon.io/favicon-converter/
-
-Fonts:
-https://fonts.google.com
 
 Images:
 
