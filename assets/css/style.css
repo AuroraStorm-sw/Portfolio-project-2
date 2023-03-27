@@ -91,11 +91,10 @@ button:hover {
 
 .banner p{
     font-size: 2rem;
-    font-family: Lora, Courier, monospace;
     text-align: center;
 }
 
-.banner h1 {
+.banner p {
     text-decoration: underline;
 }
 
@@ -106,6 +105,7 @@ button:hover {
     /* center scores */
     display: flex;
     flex-direction: row;
+    padding-left: 10px;
 }
 
 /* BATTLE GROUND */
@@ -238,6 +238,10 @@ p {
 
     .scores p {
         font-size: 1.5rem;
+    }
+
+    .scores-inner {
+        padding: 20px;
     }
 
     .options button {
