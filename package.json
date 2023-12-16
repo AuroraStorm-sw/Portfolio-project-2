@@ -4,8 +4,12 @@
   "description": "![responsive img](documentation/responsive.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest --coverage --forceExit"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "server": "^1.0.38"
+  }
 }
