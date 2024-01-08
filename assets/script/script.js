@@ -6,7 +6,8 @@
 // This code only runs on the browser
 
 if (typeof document !== 'undefined') {
-  let element = document.querySelector('.class-name')
+  const warriorPoint = document.getElementById('warrior-score');,
+  const computerPoint = document.getElementById('computer-score'); 
   
   // Manipulating the DOM here
 }
