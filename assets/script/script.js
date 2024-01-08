@@ -6,7 +6,7 @@
 // This code only runs on the browser
 
 if (typeof document !== 'undefined') {
-  const warriorPoint = document.getElementById('warrior-score');,
+  const warriorPoint = document.getElementById('warrior-score');
   const computerPoint = document.getElementById('computer-score'); 
   
   // Manipulating the DOM here
