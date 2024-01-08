@@ -2,6 +2,11 @@
  * all variables gathered in one place and used throughout the code
  */
 
+// Node.js port for Render
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3030;
+
 // score and score counting
 let warriorScore = 0;
 let computerScore = 0;
@@ -247,3 +252,7 @@ function quitGame() {
   computerHand.src = `assets/img/front.jpg`;
   warriorHand.src = `assets/img/front.jpg`;
 }
+
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
