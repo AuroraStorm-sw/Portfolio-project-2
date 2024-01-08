@@ -2,21 +2,23 @@
  * all variables gathered in one place and used throughout the code
  */
 
-
-// This code only runs on the browser
-
-if (typeof document !== 'undefined') {
-  const warriorPoint = document.getElementById('warrior-score');
-  const computerPoint = document.getElementById('computer-score'); 
-  
-  // Manipulating the DOM here
-}
-
-
 // Node.js port for Render
-const express = require("express");
+const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3030;
+const port = 3000;
+
+app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render('index');
+})
+
+app.listen(port, () => {
+    console.log('App listening on port' + port);
+
+})
 
 // score and score counting
 let warriorScore = 0;
