@@ -2,6 +2,16 @@
  * all variables gathered in one place and used throughout the code
  */
 
+
+// This code only runs on the browser
+
+if (typeof document !== 'undefined') {
+  let element = document.querySelector('.class-name')
+  
+  // Manipulating the DOM here
+}
+
+
 // Node.js port for Render
 const express = require("express");
 const app = express();
